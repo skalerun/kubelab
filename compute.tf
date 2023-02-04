@@ -1,6 +1,6 @@
 resource "google_compute_instance" "kube_master" {
   for_each     = toset(var.clusters)
-  name         = "kube-master-${each.key}"
+  name         = "kube-${each.key}-master"
   machine_type = var.machine_type
   zone         = var.zone
   tags         = var.tags
@@ -21,7 +21,7 @@ resource "google_compute_instance" "kube_master" {
 
 resource "google_compute_instance" "kube_worker" {
   for_each     = toset(var.clusters)
-  name         = "kube-worker-${each.key}"
+  name         = "kube-${each.key}-worker"
   machine_type = var.machine_type
   zone         = var.zone
   tags         = var.tags
