@@ -51,7 +51,7 @@
 
 # resource "google_compute_instance" "kube_worker_us2" {
 #   for_each     = {for u in local.users_us2: u.user => u}
-  
+
 #   name         = "kube-${each.value.user}-worker"
 #   machine_type = var.machine_type
 #   zone         = "us-west2-b"

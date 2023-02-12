@@ -6,10 +6,10 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /jetest
             pathType: ImplementationSpecific
             backend:
               service:
-                name: my-nginx
+                name: php-apache
                 port:
                   number: 80

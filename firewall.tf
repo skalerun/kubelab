@@ -19,7 +19,7 @@ resource "google_compute_firewall" "allow-kubeadm" {
     ports    = ["6443", "10250", "30000-32767"]
   }
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["http"]
+  target_tags   = ["http"]
 }
 
 resource "google_compute_firewall" "allow-http" {
@@ -31,5 +31,5 @@ resource "google_compute_firewall" "allow-http" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["http"] 
+  target_tags   = ["http"]
 }
