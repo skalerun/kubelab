@@ -6,7 +6,14 @@ spec:
   rules:
     - http:
         paths:
-          - path: /jetest
+          - path: /videos
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: php-apache
+                port:
+                  number: 80
+          - path: /comptas
             pathType: ImplementationSpecific
             backend:
               service:
